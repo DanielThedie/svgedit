@@ -1,9 +1,9 @@
 Package: svgedit
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Edit SVG files in R to insert ggplot2 plots and text
+Version: 0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Daniel", "Thedie", , "daniel.thedie@ed.ac.uk", role = c("aut", "cre"))
+Description: This package provides functions to edit SVG files byt replacing manually-created placeholders (e.g. a rectangle element) by ggplot2 plots or text elements. This allows creating reproducible, automated figures from R code.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

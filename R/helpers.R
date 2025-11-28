@@ -1,3 +1,8 @@
+#' Find an element by id in an SVG document
+#'
+#' @param doc An xml2 SVG document
+#' @param id The id of the element to find
+#' @return The xml2 node corresponding to the element with the given id
 find_element <- function(doc, id) {
   target_xpath <- paste0(".//*[@id='", id, "']")
   target <- xml2::xml_find_first(doc, target_xpath, ns = c(svg = "http://www.w3.org/2000/svg"))
@@ -11,6 +16,14 @@ find_element <- function(doc, id) {
   target
 }
 
+#' Get the dimensions of an SVG element
+#'
+#' @details The function expects the element to have 'x', 'y', 'width', and 'height' attributes.
+#' @param element An xml2 node corresponding to an SVG element
+#' @param doc_unit The unit used in the SVG document (e.g., "px", "mm", "cm", "in")
+#' @param dpi The resolution to use when interpreting pixel units
+#' @param call The calling environment for error reporting
+#' @return A list with x, y, width, and height of the element
 get_element_dimensions <- function(element, doc_unit, dpi = 150, call = rlang::caller_env()) {
   x <- as.numeric(gsub("[^0-9.]", "", xml2::xml_attr(element, "x")))
   y <- as.numeric(gsub("[^0-9.]", "", xml2::xml_attr(element, "y")))
@@ -21,7 +34,6 @@ get_element_dimensions <- function(element, doc_unit, dpi = 150, call = rlang::c
       "x" = "SVG element does not have valid width and/or height attributes."
     ), call = call)
   }
-
   list(
     x = x,
     y = y,
@@ -30,6 +42,13 @@ get_element_dimensions <- function(element, doc_unit, dpi = 150, call = rlang::c
   )
 }
 
+#' Add a ggplot2 plot to an SVG document, replacing a target element
+#'
+#' @param target An xml2 node corresponding to the SVG element to be replaced
+#' @param doc An xml2 SVG document
+#' @param plot_file Path to the SVG file of the ggplot2 plot
+#' @param dpi The resolution to use when interpreting pixel units
+#' @return The modified xml2 SVG document (doc) with the plot added
 add_plot <- function(target, doc, plot_file, dpi = 150) {
   svg_ns <- "http://www.w3.org/2000/svg"
   svg_root <- xml2::xml_root(doc)
@@ -65,6 +84,10 @@ add_plot <- function(target, doc, plot_file, dpi = 150) {
   doc
 }
 
+#' Get the unit used in the SVG document
+#'
+#' @param doc An xml2 SVG document
+#' @return The unit used in the SVG document (e.g., "px", "mm", "cm", "in")
 get_doc_unit <- function(doc) {
   svg_root <- xml2::xml_root(doc)
   svg_width_attr <- xml2::xml_attr(svg_root, "width")
@@ -72,6 +95,12 @@ get_doc_unit <- function(doc) {
   if (length(unit_match) == 1) unit_match else "px"
 }
 
+#' Convert a measurement to inches based on the unit
+#'
+#' @param val The measurement value
+#' @param unit The unit of the measurement (e.g., "px", "mm", "cm", "in")
+#' @param dpi The resolution to use when interpreting pixel units
+#' @return The measurement converted to inches
 unit_to_inch <- function(val, unit, dpi = 150) {
   switch(unit,
     "mm" = val / 25.4,
