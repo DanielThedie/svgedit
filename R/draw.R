@@ -24,6 +24,8 @@ draw <- function(input_svg, output_svg, plots, dpi = 150) {
     )
 
     doc <- add_plot(target, doc, plot_path, dpi)
-    xml2::write_xml(doc, file = output_svg)
   }
+  svg_text <- as.character(doc)
+  svg_text_clean <- gsub(">\\s+<", "><", svg_text)
+  writeLines(svg_text_clean, output_svg)
 }

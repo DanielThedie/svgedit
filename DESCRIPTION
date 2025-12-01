@@ -9,7 +9,10 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Imports: 
-    xml2
+    xml2,
+    ggplot2,
+    svglite
 Suggests: 
+    palmerpenguins,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

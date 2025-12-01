@@ -78,10 +78,23 @@ add_plot <- function(target, doc, plot_file, dpi = 150) {
     xml2::xml_add_child(plot_group, child)
   }
 
-  xml2::xml_remove(target)
+  # xml2::xml_remove(target)
   xml2::xml_set_attr(plot_group, "id", xml2::xml_attr(target, "id"))
   xml2::xml_add_child(svg_root, plot_group)
+  # remove_text_whitespace(doc)
   doc
+}
+
+remove_text_whitespace <- function(doc) {
+  text_nodes <- xml2::xml_find_all(doc, ".//svg:text", xml2::xml_ns(doc))
+  for (node in text_nodes) {
+    for (child in xml2::xml_children(node)) {
+      if (xml2::xml_type(child) == "text" && grepl("^\\s*$", xml2::xml_text(child))) {
+        xml2::xml_remove(child)
+      }
+    }
+  }
+  invisible(doc)
 }
 
 #' Get the unit used in the SVG document
