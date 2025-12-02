@@ -4,7 +4,7 @@
 \alias{draw}
 \title{Replace an svg object by a ggplot2 graph}
 \usage{
-draw(input_svg, output_svg, plots, dpi = 150)
+draw(input_svg, output_svg, plots = NULL, text = NULL, dpi = 150)
 }
 \arguments{
 \item{input_svg}{Path to the input svg file}
@@ -12,7 +12,11 @@ draw(input_svg, output_svg, plots, dpi = 150)
 \item{output_svg}{Path to the output svg file}
 
 \item{plots}{A named list of ggplot2 objects. The names should correspond to
-the ids of the svg elements to be replaced.}
+the labels of the svg elements to be replaced.}
+
+\item{text}{A named list of character vectors. The names should correspond to
+the labels of the svg text elements to be modified. Each character vector
+will be used to replace "{}" placeholders in the text element in order.}
 
 \item{dpi}{The resolution to use when rendering the ggplot2 objects.}
 }

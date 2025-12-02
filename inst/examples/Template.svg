@@ -2,11 +2,11 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="187.40045mm"
-   height="119.17773mm"
-   viewBox="0 0 187.40045 119.17773"
+   width="204.054mm"
+   height="200mm"
+   viewBox="0 0 204.05401 199.99999"
    version="1.1"
-   id="svg5"
+   id="svg3223"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="Template.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -14,7 +14,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview7"
+     id="namedview3225"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.0217435"
-     inkscape:cx="273.06266"
-     inkscape:cy="251.04148"
+     inkscape:zoom="0.49449362"
+     inkscape:cx="-70.779478"
+     inkscape:cy="733.07317"
      inkscape:window-width="1920"
      inkscape:window-height="1043"
      inkscape:window-x="0"
@@ -34,65 +34,106 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs2" />
+     id="defs3220">
+    <rect
+       x="47.404871"
+       y="603.85322"
+       width="682.87977"
+       height="120.07233"
+       id="rect307" />
+    <rect
+       x="27.275396"
+       y="518.67938"
+       width="735.43585"
+       height="224.84467"
+       id="rect242" />
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-1.974514,-43.81305)">
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.499999"
-       id="panel_A"
-       width="81.703041"
-       height="55.517265"
-       x="11.846182"
-       y="44.063049" />
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.499999"
-       id="panel_B"
-       width="81.703041"
-       height="55.517265"
-       x="107.37135"
-       y="44.063049" />
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.49507;stroke-dasharray:none"
-       id="panel_C"
-       width="177.1627"
-       height="55.280186"
-       x="11.964723"
-       y="107.46306" />
+     transform="translate(-17.769291,-67.044968)">
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none"
-       x="1.974514"
-       y="52.000957"
-       id="text1006"><tspan
+       style="font-size:10.5833px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:#000000;stroke:#000000;stroke-width:0.499999"
+       x="17.769291"
+       y="74.999298"
+       id="text3366"><tspan
          sodipodi:role="line"
-         id="tspan1004"
-         style="font-weight:normal;font-size:10.5833px;fill:#000000;stroke:none;stroke-width:0.5"
-         x="1.974514"
-         y="52.000957">A</tspan></text>
+         id="tspan3364"
+         style="fill:#000000;stroke:none;stroke-width:0.5"
+         x="17.769291"
+         y="74.999298">A</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none"
-       x="1.3285607"
-       y="116.17855"
-       id="text1006-3"><tspan
+       style="font-size:10.5833px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:#000000;stroke:#000000;stroke-width:0.499999"
+       x="101.30437"
+       y="74.999298"
+       id="text3366-3"><tspan
          sodipodi:role="line"
-         id="tspan1004-56"
-         style="font-weight:normal;font-size:10.5833px;fill:#000000;stroke:none;stroke-width:0.5"
-         x="1.3285607"
-         y="116.17855">C</tspan></text>
+         id="tspan3364-6"
+         style="fill:#000000;stroke:none;stroke-width:0.5"
+         x="101.30437"
+         y="74.999298">B</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none"
-       x="96.999634"
-       y="52.000957"
-       id="text1006-7"><tspan
+       style="font-size:10.5833px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:#000000;stroke:#000000;stroke-width:0.499999"
+       x="17.769291"
+       y="155.33987"
+       id="text3366-7"><tspan
          sodipodi:role="line"
-         id="tspan1004-5"
-         style="font-weight:normal;font-size:10.5833px;fill:#000000;stroke:none;stroke-width:0.5"
-         x="96.999634"
-         y="52.000957">B</tspan></text>
+         id="tspan3364-5"
+         style="fill:#000000;stroke:none;stroke-width:0.5"
+         x="17.769291"
+         y="155.33987">C</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.579312"
+       id="rect1234"
+       width="75.521484"
+       height="73.926834"
+       x="24.698519"
+       y="67.334633"
+       inkscape:label="panel_A" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.704573"
+       id="rect 2345"
+       width="112.89513"
+       height="73.151291"
+       x="108.51025"
+       y="67.397255"
+       inkscape:label="panel_B" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.54486;stroke-dasharray:none"
+       id="rect 3456"
+       width="196.7504"
+       height="54.728947"
+       x="24.800438"
+       y="146.42632"
+       inkscape:label="panel_C" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,17.769291,67.044968)"
+       id="text0123"
+       style="font-size:20px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';white-space:pre;shape-inside:url(#rect242);display:inline;fill:none;stroke:#000000;stroke-width:1.88976"
+       inkscape:label="fig_caption"><tspan
+         x="27.275391"
+         y="536.40067"
+         id="tspan456"><tspan
+           style="font-weight:bold;fill:#000000;stroke:none"
+           id="tspan440">Figure {}</tspan><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan442">: Penguin characteristics. </tspan><tspan
+           style="font-weight:bold;fill:#000000;stroke:none"
+           id="tspan444">(A)</tspan><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan446"> {} </tspan><tspan
+           style="font-weight:bold;fill:#000000;stroke:none"
+           id="tspan448">(B)</tspan><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan450"> {} </tspan><tspan
+           style="font-weight:bold;fill:#000000;stroke:none"
+           id="tspan452">(C)</tspan><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan454"> {}</tspan></tspan></text>
   </g>
 </svg>
