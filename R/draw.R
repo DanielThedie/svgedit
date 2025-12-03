@@ -9,20 +9,28 @@
 #'   will be used to replace "{}" placeholders in the text element in order.
 #' @param dpi The resolution to use when rendering the ggplot2 objects.
 #' @export
-draw <- function(input_svg, output_svg, plots = NULL, text = NULL, dpi = 150) {
+draw <- function(
+  input_svg,
+  output_svg,
+  plots = NULL,
+  plot_scale = NULL,
+  text = NULL,
+  dpi = 150
+) {
   doc <- xml2::read_xml(input_svg)
   doc_unit <- get_doc_unit(doc)
 
   for (label in names(plots)) {
     target <- find_element(doc, label)
     target_dim <- get_element_dimensions(target, doc_unit, dpi)
+    scale <- plot_scale[[label]] %||% 1
 
     plot_path <- tempfile(fileext = ".svg")
     ggplot2::ggsave(
       filename = plot_path,
       plot = plots[[label]],
-      width = unit_to_inch(target_dim$width, doc_unit, dpi),
-      height = unit_to_inch(target_dim$height, doc_unit, dpi),
+      width = unit_to_inch(target_dim$width, doc_unit, dpi) * scale,
+      height = unit_to_inch(target_dim$height, doc_unit, dpi) * scale,
       dpi = dpi
     )
 
