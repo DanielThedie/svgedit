@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="204.054mm"
+   width="310.13412mm"
    height="200mm"
-   viewBox="0 0 204.05401 199.99999"
+   viewBox="0 0 310.13414 199.99999"
    version="1.1"
    id="svg3223"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.49449362"
-     inkscape:cx="-70.779478"
-     inkscape:cy="733.07317"
+     inkscape:cx="20.222708"
+     inkscape:cy="326.59673"
      inkscape:window-width="1920"
      inkscape:window-height="1043"
      inkscape:window-x="0"
@@ -36,16 +36,16 @@
   <defs
      id="defs3220">
     <rect
-       x="47.404871"
-       y="603.85322"
-       width="682.87977"
+       x="47.404873"
+       y="603.85321"
+       width="682.87976"
        height="120.07233"
        id="rect307" />
     <rect
        x="27.275396"
        y="518.67938"
-       width="735.43585"
-       height="224.84467"
+       width="1126.8878"
+       height="221.97916"
        id="rect242" />
   </defs>
   <g
@@ -86,6 +86,17 @@
          style="fill:#000000;stroke:none;stroke-width:0.5"
          x="17.769291"
          y="155.33987">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:#000000;stroke:#000000;stroke-width:0.499999"
+       x="222.67708"
+       y="76.181572"
+       id="text3366-7-3"><tspan
+         sodipodi:role="line"
+         id="tspan3364-5-6"
+         style="fill:#000000;stroke:none;stroke-width:0.5"
+         x="222.67708"
+         y="76.181572">D</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.579312"
        id="rect1234"
@@ -118,22 +129,34 @@
        inkscape:label="fig_caption"><tspan
          x="27.275391"
          y="536.40067"
-         id="tspan456"><tspan
+         id="tspan415"><tspan
            style="font-weight:bold;fill:#000000;stroke:none"
-           id="tspan440">Figure {}</tspan><tspan
+           id="tspan395">Figure {}</tspan><tspan
            style="fill:#000000;stroke:none"
-           id="tspan442">: Penguin characteristics. </tspan><tspan
+           id="tspan397">: Penguin characteristics. </tspan><tspan
            style="font-weight:bold;fill:#000000;stroke:none"
-           id="tspan444">(A)</tspan><tspan
+           id="tspan399">(A)</tspan><tspan
            style="fill:#000000;stroke:none"
-           id="tspan446"> {} </tspan><tspan
+           id="tspan401"> {} </tspan><tspan
            style="font-weight:bold;fill:#000000;stroke:none"
-           id="tspan448">(B)</tspan><tspan
+           id="tspan403">(B)</tspan><tspan
            style="fill:#000000;stroke:none"
-           id="tspan450"> {} </tspan><tspan
+           id="tspan405"> {} </tspan><tspan
            style="font-weight:bold;fill:#000000;stroke:none"
-           id="tspan452">(C)</tspan><tspan
+           id="tspan407">(C)</tspan><tspan
            style="fill:#000000;stroke:none"
-           id="tspan454"> {}</tspan></tspan></text>
+           id="tspan409"> {} </tspan><tspan
+           style="font-weight:bold;fill:#000000;stroke:none"
+           id="tspan411">(D)</tspan><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan413"> {}</tspan></tspan></text>
+    <rect
+       style="fill:none;fill-opacity:0.999976;stroke:#000000;stroke-width:0.49861"
+       id="rect445"
+       width="96.431564"
+       height="132.88339"
+       x="231.22255"
+       y="67.294273"
+       inkscape:label="panel_D" />
   </g>
 </svg>

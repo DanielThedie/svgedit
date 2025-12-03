@@ -11,7 +11,8 @@ RoxygenNote: 7.3.3
 Imports: 
     xml2,
     ggplot2,
-    svglite
+    svglite,
+    base64enc
 Suggests: 
     palmerpenguins,
     testthat (>= 3.0.0)

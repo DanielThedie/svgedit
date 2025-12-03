@@ -5,7 +5,6 @@
 #' @param svg_file Path to the SVG file to be inserted
 #' @param dpi The resolution to use when interpreting pixel units
 #' @return The modified xml2 SVG document (doc) with the svg file added and the target removed
-#' @export
 insert_svg <- function(doc, label, insert_file, dpi = 150) {
   doc_unit <- get_doc_unit(doc)
   target <- find_element(doc, label)
@@ -44,7 +43,6 @@ insert_svg <- function(doc, label, insert_file, dpi = 150) {
 #' @param label The label of the text element to edit
 #' @param values A character vector to replace each "{}" in order
 #' @return The modified SVG document (doc) with the text inserted
-#' @export
 insert_text <- function(doc, label, values) {
   text_node <- find_element(doc, label)
   tspans <- xml2::xml_find_all(text_node, ".//svg:tspan", ns = inkscape_ns)
@@ -62,5 +60,37 @@ insert_text <- function(doc, label, values) {
       xml2::xml_set_text(text_node_i, tspan_text)
     }
   }
+  doc
+}
+
+#' Insert a raster image (PNG/JPG) into an SVG document, replacing a target element
+#'
+#' @param doc An xml2 SVG document
+#' @param label The label of the target element to be replaced
+#' @param image_file Path to the PNG or JPG image to be inserted
+#' @param dpi The resolution to use when interpreting pixel units (in the template svg)
+#' @return The modified SVG document (doc) with the image added and the target removed
+insert_image <- function(doc, label, image_file, dpi = 150) {
+  if (!file.exists(image_file)) {
+    cli::cli_abort("Could not find image file {image_file}.")
+  }
+  doc_unit <- get_doc_unit(doc)
+  target <- find_element(doc, label)
+  target_dim <- get_element_dimensions(target, doc_unit, dpi)
+
+  img_ext <- tools::file_ext(image_file)
+  mime_type <- if (img_ext == "png") "image/png" else "image/jpeg"
+  img_data <- base64enc::dataURI(file = image_file, mime = mime_type)
+
+  image_node <- xml2::xml_new_root("image", ns = inkscape_ns)
+  xml2::xml_set_attr(image_node, "x", target_dim$x)
+  xml2::xml_set_attr(image_node, "y", target_dim$y)
+  xml2::xml_set_attr(image_node, "width", target_dim$width)
+  xml2::xml_set_attr(image_node, "height", target_dim$height)
+  xml2::xml_set_attr(image_node, "xlink:href", img_data)
+  xml2::xml_set_attr(image_node, "inkscape:label", xml2::xml_attr(target, "inkscape:label", ns = inkscape_ns))
+
+  xml2::xml_add_child(xml2::xml_parent(target), image_node)
+  xml2::xml_remove(target)
   doc
 }

@@ -1,3 +1,4 @@
+library(palmerpenguins)
 library(ggplot2)
 
 data("penguins")
@@ -36,16 +37,20 @@ svgedit::draw(
     panel_C = flipper_length
   ),
   plot_scale = list(
-    panel_A = 4,
+    panel_A = 1,
     panel_B = 1,
-    panel_C = 0.5
+    panel_C = 1
   ),
   text = list(
     fig_caption = c(
       "1",
       "Number of penguins of each species per island",
       "Body mass vs flipper length colored by species",
-      "Flipper length distribution by species"
+      "Flipper length distribution by species",
+      "Photo of an Adelie Penguin (Diego Tirira, CC BY-SA 2.0)"
     )
+  ),
+  images = list(
+    panel_D = system.file("examples", "adelie_penguin.jpeg", package = "svgedit")
   )
 )

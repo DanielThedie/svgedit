@@ -15,11 +15,13 @@ draw <- function(
   plots = NULL,
   plot_scale = NULL,
   text = NULL,
+  images = NULL,
   dpi = 150
 ) {
   doc <- xml2::read_xml(input_svg)
   doc_unit <- get_doc_unit(doc)
 
+  # Insert plots
   for (label in names(plots)) {
     target <- find_element(doc, label)
     target_dim <- get_element_dimensions(target, doc_unit, dpi)
@@ -37,8 +39,14 @@ draw <- function(
     doc <- insert_svg(doc, label, plot_path, dpi)
   }
 
+  # Insert text
   for (label in names(text)) {
     doc <- insert_text(doc, label, text[[label]])
+  }
+
+  # Insert images
+  for (label in names(images)) {
+    doc <- insert_image(doc, label, images[[label]], dpi)
   }
 
   svg_text <- as.character(doc)

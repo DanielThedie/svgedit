@@ -14,8 +14,8 @@ test_that("draw replaces text placeholders and inserts plot", {
 
   # ggplot to insert
   plot <- ggplot2::ggplot(palmerpenguins::penguins,
-                 ggplot2::aes(flipper_length_mm, body_mass_g)) +
-          ggplot2::geom_point()
+                          ggplot2::aes(flipper_length_mm, body_mass_g)) +
+    ggplot2::geom_point()
 
   output_file <- tempfile(fileext = ".svg")
 
