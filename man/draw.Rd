@@ -4,19 +4,33 @@
 \alias{draw}
 \title{Replace an svg object by a ggplot2 graph}
 \usage{
-draw(input_svg, output_svg, plots = NULL, text = NULL, dpi = 150)
+draw(
+  input_svg,
+  output_svg,
+  plots = NULL,
+  plot_scale = NULL,
+  text = NULL,
+  images = NULL,
+  dpi = 150
+)
 }
 \arguments{
 \item{input_svg}{Path to the input svg file}
 
 \item{output_svg}{Path to the output svg file}
 
-\item{plots}{A named list of ggplot2 objects. The names should correspond to
+\item{plots}{A named list of ggplot2 objects. The list names should correspond to
 the labels of the svg elements to be replaced.}
 
-\item{text}{A named list of character vectors. The names should correspond to
+\item{plot_scale}{A named list of numeric values to scale the inserted plots.
+The names should correspond to the labels of the svg elements to be replaced.}
+
+\item{text}{A named list of character vectors. The list names should correspond to
 the labels of the svg text elements to be modified. Each character vector
 will be used to replace "{}" placeholders in the text element in order.}
+
+\item{images}{A named list of paths to image files. The list names should correspond to
+the labels of the svg image elements to be replaced.}
 
 \item{dpi}{The resolution to use when rendering the ggplot2 objects.}
 }

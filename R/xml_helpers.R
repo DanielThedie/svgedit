@@ -1,7 +1,7 @@
 #' Find an element by label in an Inkscape SVG document
 #'
 #' @param doc An xml2 SVG document
-#' @param id The label of the element to find
+#' @param label The label of the element to find
 #' @return The xml2 node corresponding to the element with the given id
 find_element <- function(doc, label) {
   target_xpath <- paste0(".//*[@inkscape:label='", label, "']")

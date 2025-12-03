@@ -9,7 +9,7 @@ find_element(doc, label)
 \arguments{
 \item{doc}{An xml2 SVG document}
 
-\item{id}{The label of the element to find}
+\item{label}{The label of the element to find}
 }
 \value{
 The xml2 node corresponding to the element with the given id

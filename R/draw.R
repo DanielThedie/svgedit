@@ -2,11 +2,15 @@
 #'
 #' @param input_svg Path to the input svg file
 #' @param output_svg Path to the output svg file
-#' @param plots A named list of ggplot2 objects. The names should correspond to
+#' @param plots A named list of ggplot2 objects. The list names should correspond to
 #'   the labels of the svg elements to be replaced.
-#' @param text A named list of character vectors. The names should correspond to
+#' @param plot_scale A named list of numeric values to scale the inserted plots.
+#' The names should correspond to the labels of the svg elements to be replaced.
+#' @param text A named list of character vectors. The list names should correspond to
 #'   the labels of the svg text elements to be modified. Each character vector
 #'   will be used to replace "{}" placeholders in the text element in order.
+#' @param images A named list of paths to image files. The list names should correspond to
+#'   the labels of the svg image elements to be replaced.
 #' @param dpi The resolution to use when rendering the ggplot2 objects.
 #' @export
 draw <- function(

@@ -2,7 +2,7 @@
 #'
 #' @param doc An xml2 SVG document
 #' @param label The label of the target element to be replaced
-#' @param svg_file Path to the SVG file to be inserted
+#' @param insert_file Path to the SVG file to be inserted
 #' @param dpi The resolution to use when interpreting pixel units
 #' @return The modified xml2 SVG document (doc) with the svg file added and the target removed
 insert_svg <- function(doc, label, insert_file, dpi = 150) {

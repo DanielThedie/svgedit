@@ -11,9 +11,9 @@ insert_svg(doc, label, insert_file, dpi = 150)
 
 \item{label}{The label of the target element to be replaced}
 
-\item{dpi}{The resolution to use when interpreting pixel units}
+\item{insert_file}{Path to the SVG file to be inserted}
 
-\item{svg_file}{Path to the SVG file to be inserted}
+\item{dpi}{The resolution to use when interpreting pixel units}
 }
 \value{
 The modified xml2 SVG document (doc) with the svg file added and the target removed
