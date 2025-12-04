@@ -35,8 +35,8 @@ draw <- function(
     ggplot2::ggsave(
       filename = plot_path,
       plot = plots[[label]],
-      width = unit_to_inch(target_dim$width, doc_unit, dpi) * scale,
-      height = unit_to_inch(target_dim$height, doc_unit, dpi) * scale,
+      width = unit_to_inch(target_dim$width, doc_unit, dpi) / scale,
+      height = unit_to_inch(target_dim$height, doc_unit, dpi) / scale,
       dpi = dpi
     )
 
