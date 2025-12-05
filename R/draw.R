@@ -12,7 +12,19 @@
 #' @param images A named list of paths to image files. The list names should correspond to
 #'   the labels of the svg image elements to be replaced.
 #' @param dpi The resolution to use when rendering the ggplot2 objects.
+#' @returns Invisibly returns NULL. The output svg file is written to `output_svg`.
 #' @export
+#' @examples
+#' library(ggplot2)
+#' # Create a simple plot
+#' p <- ggplot(mtcars, aes(x = mpg, y = wt)) + geom_point()
+#' # Use draw() to insert the plot into an SVG template
+#' input_svg <- system.file("examples", "Template.svg", package = "svgedit")
+#' draw(
+#'   input_svg = input_svg,
+#'   output_svg = "output.svg",
+#'   plots = list(panel_A = p)
+#' )
 draw <- function(
   input_svg,
   output_svg,

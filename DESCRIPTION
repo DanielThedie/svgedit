@@ -2,20 +2,29 @@ Package: svgedit
 Title: Edit SVG files in R to insert ggplot2 plots and text
 Version: 0.0.1
 Authors@R: 
-    person("Daniel", "Thedie", , "daniel.thedie@ed.ac.uk", role = c("aut", "cre"))
-Description: This package provides functions to edit SVG files byt replacing manually-created placeholders (e.g. a rectangle element) by ggplot2 plots or text elements. This allows creating reproducible, automated figures from R code.
+  person(
+    "Daniel",
+    "Thedie",
+    email = "daniel.thedie@ed.ac.uk",
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0002-1352-7245")
+  )
+Description: This package provides functions to edit SVG files created in Inkscape by replacing placeholders (e.g. a rectangle element) by ggplot2 plots or images, and editing text boxes. This automates the creation of figures with complex layouts from R code.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Imports:
-    cli,
-    rlang,
-    xml2,
-    ggplot2,
-    base64enc
+  cli,
+  rlang,
+  xml2,
+  ggplot2,
+  base64enc
 Suggests: 
     palmerpenguins,
     testthat (>= 3.0.0),
-    svglite
+    svglite,
+    knitr,
+    rmarkdown
 Config/testthat/edition: 3
+VignetteBuilder: knitr
