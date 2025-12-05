@@ -48,7 +48,7 @@ p <- ggplot(mtcars, aes(x = mpg, y = wt)) + geom_point()
 input_svg <- system.file("examples", "Template.svg", package = "svgedit")
 draw(
   input_svg = input_svg,
-  output_svg = "output.svg",
+  output_svg = tempfile(fileext = ".svg"),
   plots = list(panel_A = p)
 )
 }
