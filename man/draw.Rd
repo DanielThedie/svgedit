@@ -34,6 +34,21 @@ the labels of the svg image elements to be replaced.}
 
 \item{dpi}{The resolution to use when rendering the ggplot2 objects.}
 }
+\value{
+Invisibly returns NULL. The output svg file is written to \code{output_svg}.
+}
 \description{
 Replace an svg object by a ggplot2 graph
+}
+\examples{
+library(ggplot2)
+# Create a simple plot
+p <- ggplot(mtcars, aes(x = mpg, y = wt)) + geom_point()
+# Use draw() to insert the plot into an SVG template
+input_svg <- system.file("examples", "Template.svg", package = "svgedit")
+draw(
+  input_svg = input_svg,
+  output_svg = "output.svg",
+  plots = list(panel_A = p)
+)
 }
