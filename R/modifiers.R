@@ -15,7 +15,7 @@ insert_svg <- function(doc, label, insert_file, dpi = 150) {
   insert_width <- as.numeric(gsub("[^0-9.]", "", xml2::xml_attr(insert_root, "width")))
   insert_height <- as.numeric(gsub("[^0-9.]", "", xml2::xml_attr(insert_root, "height")))
 
-  insert_group <- xml2::xml_new_root("g", ns = inkscape_ns)
+  insert_group <- xml2::xml_new_root("g")
   xml2::xml_set_attr(insert_group, "transform",
     sprintf("translate(%f,%f) scale(%f,%f)",
             target_dim$x,
@@ -82,7 +82,9 @@ insert_image <- function(doc, label, image_file, dpi = 150) {
   mime_type <- if (img_ext == "png") "image/png" else "image/jpeg"
   img_data <- base64enc::dataURI(file = image_file, mime = mime_type)
 
-  image_node <- xml2::xml_new_root("image", ns = inkscape_ns)
+  xml2::xml_set_attr(xml2::xml_root(doc), "xmlns:xlink", "http://www.w3.org/1999/xlink")
+
+  image_node <- xml2::xml_new_root("image")
   xml2::xml_set_attr(image_node, "x", target_dim$x)
   xml2::xml_set_attr(image_node, "y", target_dim$y)
   xml2::xml_set_attr(image_node, "width", target_dim$width)
