@@ -3,3 +3,4 @@
 ^LICENSE\.md$
 .github
 .lintr
+^cran-comments\.md$
