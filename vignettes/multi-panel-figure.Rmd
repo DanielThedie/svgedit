@@ -26,7 +26,7 @@ First, we need to create an SVG template in Inkscape.
 
 * Draw rectangles where the plots and image will go
 * Add text boxes for the figure title and caption, with `{}` where `svgedit` should insert text
-* Open the "Layers and Contents" panel (Ctrl+Shift+L) and name the layers according to the content they will hold, e.g. `panel_A`, `panel_B`, `fig_caption`, etc.
+* Open the "Layers and Objects" panel (Ctrl+Shift+L) and name the layers according to the content they will hold, e.g. `panel_A`, `panel_B`, `fig_caption`, etc.
 
 This is what our template looks like:
 
