@@ -4,12 +4,20 @@
 \name{svgedit-package}
 \alias{svgedit}
 \alias{svgedit-package}
-\title{svgedit: Edit SVG files in R to insert ggplot2 plots and text}
+\title{svgedit: Insert Graphs, Images and Text in SVG Files}
 \description{
-This package provides functions to edit SVG files created in Inkscape by replacing placeholders (e.g. a rectangle element) by ggplot2 plots or images, and editing text boxes. This automates the creation of figures with complex layouts from R code.
+Edit SVG (Scalable Vector Graphics) files created in 'Inkscape' by replacing placeholders (e.g. a rectangle element or {} in a text box) by 'ggplot2' objects, images or text. This helps automate the creation of figures with complex layouts.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/DanielThedie/svgedit}
+  \item Report bugs at \url{https://github.com/DanielThedie/svgedit/issues}
+}
+
 }
 \author{
-\strong{Maintainer}: Daniel Thedie \email{daniel.thedie@ed.ac.uk} (\href{https://orcid.org/0000-0002-1352-7245}{ORCID})
+\strong{Maintainer}: Daniel Thedie \email{daniel.thedie@ed.ac.uk} (\href{https://orcid.org/0000-0002-1352-7245}{ORCID}) [copyright holder]
 
 }
 \keyword{internal}
