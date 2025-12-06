@@ -1,6 +1,6 @@
 Package: svgedit
 Title: Insert Graphs, Images and Text in SVG Files
-Version: 0.0.1
+Version: 1.0.0
 Authors@R: 
   person(
     "Daniel",

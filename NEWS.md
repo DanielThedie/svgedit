@@ -1,3 +1,5 @@
+# svgedit 1.0.0
+
 # svgedit
 
 ## 0.0.1
