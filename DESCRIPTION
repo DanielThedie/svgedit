@@ -9,7 +9,7 @@ Authors@R:
     role = c("aut", "cre", "cph"),
     comment = c(ORCID = "0000-0002-1352-7245")
   )
-Description: Edit SVG (Scalable Vector Graphics) files created in 'Inkscape' by replacing placeholders (e.g. a rectangle element or {} in a text box) by 'ggplot2' objects, images or text. This helps automate the creation of figures with complex layouts.
+Description: Edit SVG files created in 'Inkscape' by replacing placeholders (e.g. a rectangle element or {} in a text box) by 'ggplot2' objects, images or text. This helps automate the creation of figures with complex layouts.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
