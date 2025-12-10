@@ -1,10 +1,10 @@
 #' Add an element to an SVG document, replacing a target element
 #'
-#' @param doc An xml2 SVG document
+#' @param doc An SVG document
 #' @param label The label of the target element to be replaced
 #' @param insert_file Path to the SVG file to be inserted
 #' @param dpi The resolution to use when interpreting pixel units
-#' @return The modified xml2 SVG document (doc) with the svg file added and the target removed
+#' @return The modified SVG document (doc) with the svg file added and the target removed
 insert_svg <- function(doc, label, insert_file, dpi = 150) {
   doc_unit <- get_doc_unit(doc)
   target <- find_element(doc, label)
@@ -32,7 +32,7 @@ insert_svg <- function(doc, label, insert_file, dpi = 150) {
   }
 
   xml2::xml_set_attr(insert_group, "inkscape:label", xml2::xml_attr(target, "inkscape:label", ns = inkscape_ns))
-  xml2::xml_add_child(xml2::xml_parent(target), insert_group)
+  xml2::xml_add_sibling(target, insert_group, .where = "after")
   xml2::xml_remove(target)
   doc
 }
@@ -65,7 +65,7 @@ insert_text <- function(doc, label, values) {
 
 #' Insert a raster image (PNG/JPG) into an SVG document, replacing a target element
 #'
-#' @param doc An xml2 SVG document
+#' @param doc An SVG document
 #' @param label The label of the target element to be replaced
 #' @param image_file Path to the PNG or JPG image to be inserted
 #' @param dpi The resolution to use when interpreting pixel units (in the template svg)
@@ -92,7 +92,7 @@ insert_image <- function(doc, label, image_file, dpi = 150) {
   xml2::xml_set_attr(image_node, "xlink:href", img_data)
   xml2::xml_set_attr(image_node, "inkscape:label", xml2::xml_attr(target, "inkscape:label", ns = inkscape_ns))
 
-  xml2::xml_add_child(xml2::xml_parent(target), image_node)
+  xml2::xml_add_sibling(target, image_node, .where = "after")
   xml2::xml_remove(target)
   doc
 }
