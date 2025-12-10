@@ -34,6 +34,7 @@ draw <- function(
   images = NULL,
   dpi = 150
 ) {
+  check_paths(c(input_svg, images))
   doc <- xml2::read_xml(input_svg)
   doc_unit <- get_doc_unit(doc)
 

@@ -6,7 +6,7 @@
 \alias{svgedit-package}
 \title{svgedit: Insert Graphs, Images and Text in SVG Files}
 \description{
-Edit SVG (Scalable Vector Graphics) files created in 'Inkscape' by replacing placeholders (e.g. a rectangle element or {} in a text box) by 'ggplot2' objects, images or text. This helps automate the creation of figures with complex layouts.
+Edit SVG files created in 'Inkscape' by replacing placeholders (e.g. a rectangle element or {} in a text box) by 'ggplot2' objects, images or text. This helps automate the creation of figures with complex layouts.
 }
 \seealso{
 Useful links:
