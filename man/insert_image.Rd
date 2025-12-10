@@ -7,7 +7,7 @@
 insert_image(doc, label, image_file, dpi = 150)
 }
 \arguments{
-\item{doc}{An xml2 SVG document}
+\item{doc}{An SVG document}
 
 \item{label}{The label of the target element to be replaced}
 
