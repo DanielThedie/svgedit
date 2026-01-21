@@ -1,4 +1,4 @@
-# svgedit
+# svgedit <img src="man/figures/logo.png" align="right" height="138" alt="svgedit hex logo" />
 
 svgedit allows creating figures with complex layout programmatically in R, by using an SVG file as a template.
 
